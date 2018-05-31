@@ -46,7 +46,16 @@ $picture-size: 128px;
   }
 
   .UserProfileEditPicture-delete-button {
-    cursor: pointer;
-    width: $picture-size;
+    display: none;
+    margin: 12px 0;
+
+    &,
+    .ConfirmButton-default-button {
+      width: $picture-size;
+    }
+
+    @include respond-to(medium) {
+      display: block;
+    }
   }
 }
